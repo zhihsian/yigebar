@@ -1,0 +1,22 @@
+height: 32
+background: 0x1f1f1f
+font-family: "Sans"
+font-size: 20
+
+left-modules:
+  - name: "text"
+    text: "應用"
+    content-padding: 10
+    background: 0x212121
+    left-click: "~/.config/yigebar/scripts/app_menu"
+right-modules:
+  - name: "text"
+    text: "電源"
+    content-padding: 10
+    background: 0x424242
+    left-click: "~/.config/yigrbar/scripts/powermenu"
+  - name: "time"
+    content-padding: 20
+    background: 0x616161
+    time: "%H:%M"
+    time-alt: "%Y-%m-%d %H:%M:%S"
