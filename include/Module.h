@@ -4,7 +4,7 @@
 #include <string>
 #include <memory>
 
-class Callback;
+class Bridge;
 
 class Module {
 public:
@@ -13,7 +13,7 @@ public:
     virtual const std::string &getName() = 0;
     virtual std::string getContent() = 0;
 
-    virtual void start(std::shared_ptr<Callback> cb) = 0;
+    virtual void start(std::shared_ptr<Bridge> cb) = 0;
 
     virtual void clickEvent(uint16_t button) = 0;
     // virtual void doubleClickEvent() = 0;

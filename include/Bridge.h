@@ -1,5 +1,5 @@
-#ifndef YIGEBAR_INCLUDE_CALLBACK_H
-#define YIGEBAR_INCLUDE_CALLBACK_H
+#ifndef YIGEBAR_INCLUDE_BRIDGE_H
+#define YIGEBAR_INCLUDE_BRIDGE_H
 
 #include <cstdint>
 
@@ -7,9 +7,12 @@
 
 #include "YigeBar.h"
 
-class Callback {
+class Bridge {
 public:
-    Callback(YigeBar *bar, YigeBar::MODULE_POSITION pos, uint16_t id, const YAML::Node &options);
+    Bridge(YigeBar *bar,
+           YigeBar::MODULE_POSITION pos,
+           uint16_t id,
+           const YAML::Node &options);
 
     virtual const YAML::Node &getOptions();
 
@@ -17,6 +20,7 @@ public:
      * 當模塊內容有更新，通知 bar 更新內容
      */
     virtual void postUpdate();
+
 private:
     YigeBar *bar_;
     YigeBar::MODULE_POSITION pos_;
@@ -24,4 +28,4 @@ private:
     YAML::Node options_;
 };
 
-#endif // !YIGEBAR_INCLUDE_CALLBACK_H
+#endif // !YIGEBAR_INCLUDE_BRIDGE_H

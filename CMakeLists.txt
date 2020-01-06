@@ -19,7 +19,7 @@ add_executable(yigebar
         src/Atoms.cc include/Atoms.h
         src/Painter.cc include/Painter.h
         src/ModuleLoader.cc include/ModuleLoader.h
-        src/Callback.cc include/Callback.h)
+        src/Bridge.cc include/Bridge.h)
 
 target_link_libraries(yigebar
         pthread

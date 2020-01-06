@@ -8,10 +8,10 @@ public:
     virtual const std::string &getName() override;
     virtual std::string getContent() override;
 
-    virtual void start(std::shared_ptr<Callback> cb) override;
+    virtual void start(std::shared_ptr<Bridge> cb) override;
     virtual void clickEvent(uint16_t button) override;
 private:
-    std::shared_ptr<Callback> cb_;
+    std::shared_ptr<Bridge> cb_;
 
     std::string content_;
     std::string left_click_;

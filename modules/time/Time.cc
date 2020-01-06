@@ -7,7 +7,7 @@
 #include <sstream>
 #include <thread>
 
-#include <Callback.h>
+#include <Bridge.h>
 #include <YigeBar.h>
 
 Time::Time()
@@ -30,7 +30,7 @@ std::string Time::getContent() {
     return ss.str();
 }
 
-void Time::start(std::shared_ptr<Callback> cb) {
+void Time::start(std::shared_ptr<Bridge> cb) {
     cb_ = cb;
 
     auto options = cb_->getOptions();

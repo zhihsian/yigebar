@@ -2,7 +2,7 @@
 
 #include <cstdlib>
 
-#include <Callback.h>
+#include <Bridge.h>
 
 const std::string &Text::getName() {
     static const std::string name("text");
@@ -13,7 +13,7 @@ std::string Text::getContent() {
     return content_;
 }
 
-void Text::start(std::shared_ptr<Callback> cb) {
+void Text::start(std::shared_ptr<Bridge> cb) {
     cb_ = cb;
 
     auto options = cb_->getOptions();

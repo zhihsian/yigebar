@@ -4,7 +4,7 @@
 
 #include <glog/logging.h>
 
-#include <Callback.h>
+#include <Bridge.h>
 #include <Painter.h>
 
 using std::swap;
@@ -123,7 +123,7 @@ void YigeBar::initOptions() {
             size_t id = left_modules_.size();
 
             // 配置回調信息並啓動模塊
-            auto cb = std::make_shared<Callback>(this,
+            auto cb = std::make_shared<Bridge>(this,
                                                  MODULE_POSITION::LEFT,
                                                  id,
                                                  i);
@@ -144,7 +144,7 @@ void YigeBar::initOptions() {
             size_t id = right_modules_.size();
 
             // 配置回調信息並啓動模塊
-            auto cb = std::make_shared<Callback>(this,
+            auto cb = std::make_shared<Bridge>(this,
                                                  MODULE_POSITION::RIGHT,
                                                  id,
                                                  i);

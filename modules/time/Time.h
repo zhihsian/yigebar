@@ -12,13 +12,13 @@ public:
     virtual const std::string &getName() override;
     virtual std::string getContent() override;
 
-    virtual void start(std::shared_ptr<Callback> cb) override;
+    virtual void start(std::shared_ptr<Bridge> cb) override;
     virtual void clickEvent(uint16_t button) override;
 
 private:
     constexpr const static char *const default_time_ = "%H:%M";
 
-    std::shared_ptr<Callback> cb_;
+    std::shared_ptr<Bridge> cb_;
 
     bool is_alt_;
 
